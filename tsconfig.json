@@ -1,0 +1,52 @@
+{
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "commonjs",
+    "lib": [
+      "ES6"
+    ],
+    "allowJs": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "removeComments": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/@types"
+    ],
+    "strict": true,
+    "baseUrl": "./",
+    "paths": {
+      "@db/*":[
+        "src/db/*"
+      ],
+      "@db-models/*": [
+        "src/db/models/*"
+      ],
+      "@db-config/*": [
+        "src/db/config/*"
+      ],
+      "@env/*": [
+        "./env/*"
+      ],
+      "@routes/*": [
+        "./src/routes/*"
+      ],
+      "@controllers/*": [
+        "./src/controllers/*"
+      ],
+      "@schemas/*": [
+        "./src/graphql/schemas/*"
+      ],
+      "@resolvers/*": [
+        "./src/graphql/resolvers/*"
+      ]
+    },
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
