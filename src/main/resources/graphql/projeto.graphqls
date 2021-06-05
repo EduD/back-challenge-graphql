@@ -1,0 +1,30 @@
+
+
+type Projeto {
+    id:ID!,
+    nome:String!
+    valor:Float!
+    usuario: Usuario
+}
+
+input ProjetoInput {
+    id:ID,
+    nome:String!
+    valor:Float!
+    usuarioId: ID!
+}
+
+extend type Query {
+    projeto(id:ID!):Projeto
+
+    projetos(page:Int = 0, size:Int = 4):[Projeto]!
+
+}
+
+extend type Mutation {
+    saveProjeto(projeto:ProjetoInput!):Projeto!
+
+    deleteProjeto(id:ID!):Boolean!
+
+}
+

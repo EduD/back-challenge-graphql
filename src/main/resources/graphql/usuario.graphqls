@@ -1,0 +1,27 @@
+
+type Usuario {
+    id:ID!,
+    nome:String!
+    email:String!
+
+    projetos:[Projeto]!
+}
+
+input UsuarioInput {
+    id:ID,
+    nome:String!
+    email:String!
+}
+
+extend type Query {
+    usuario(id:ID!):Usuario
+
+    usuarios:[Usuario]!
+
+}
+
+extend type Mutation {
+    saveUsuario(usuario:UsuarioInput!):Usuario!
+
+    deleteUsuario(id:ID!):Boolean!
+}
